@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Configurator modelId="photobox" collection="thumbnail"/>
+    <Configurator :modelId="photobox" :collection="thumbnail"/>
   </div>
 </template>
 
@@ -9,6 +9,12 @@ import Configurator from './components/Configurator';
 
 export default {
   name: 'App',
+  data() {
+  return {
+  photobox: 'photobox',
+  thumbnail: 'thumbnail'
+  }
+  },
   components: {
     Configurator,
   },
